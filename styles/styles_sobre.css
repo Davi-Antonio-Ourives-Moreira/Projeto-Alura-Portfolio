@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --cor-primaria: #000000;
+    --cor-secundaria: #22D4FD;
+    --cor-terciaria: #f6f6f6;
+
+    --fonte-primaria: "Krona One", "sans-serif";
+    --fonte-secundaria: "Montserrat", "sans-serif";
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    text-decoration: none;
+    list-style: none;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    background: var(--cor-primaria);
+    box-sizing: border-box;
+    color: var(--cor-terciaria);
+    overflow-x: hidden;
+}
+
+header{
+    height: 100px;
+}
+
+header nav{
+    display: flex;
+    position: relative;
+    left: 15%;
+    top: 50px;
+    width: 300px;
+}
+
+header nav ul{
+    display: flex;
+    gap: 80px;
+}
+
+header nav ul li a{
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+    font-size: 23px;
+}
+
+header nav ul li a:hover{
+    color: #4dbad3;
+}
+
+main{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+}
+
+.content_texto_sobre_mim{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.content_texto_sobre_mim h1{
+    font-family: var(--fonte-primaria);
+    color: var(--cor-terciaria);
+}
+
+.content_texto_sobre_mim p{
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-terciaria);
+}
+
+.content_imagem img{
+    width: 430px;
+}
+
+footer{
+    font-family: var(--fonte-secundaria);
+    font-size: 18px;
+    font-weight: 400px;
+    color: var(--cor-primaria);
+    background: var(--cor-secundaria);
+    padding: 24px;
+    position: relative;
+    top: 230px;
+}
+
+footer p{
+    text-align: center;
+
+}
+
+@media (max-width: 1094px) {
+    header nav{
+        width: auto;
+        justify-content: center;
+        left: 0;
+    }
+
+    main{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .content_texto_sobre_mim{
+        padding: 0% 1%;
+        width: auto;
+        box-sizing: border-box;
+    }
+
+    .content-textos ul{
+        width: auto;
+    }
+
+    .content-textos h1{
+        text-align: center;
+    }
+
+    .content-textos p{
+        text-align: center;
+    } 
+}
+
+@media (max-width: 664px) {
+    .content_imagem img{
+        width: 320px;
+    }
+}
+
+@media (max-width: 347px){
+    .content_textos{
+        padding: 0 1%;
+    }
+
+    .content-textos ul button{
+        width: auto;
+    }
+}
